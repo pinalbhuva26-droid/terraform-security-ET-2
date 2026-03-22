@@ -20,3 +20,5 @@ jobs:
       run: |
         curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash
         tfsec .
+ - name: Generate Report
+  run: tfsec . --format json --out report.json
