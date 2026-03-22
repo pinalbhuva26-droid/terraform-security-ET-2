@@ -1,8 +1,8 @@
-provider "aws" {
-  region = "us-east-1"
+terraform {
+  required_version = ">= 1.0"
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-public-bucket-demo-12345"
-  acl    = "public-read"
+resource "local_file" "test" {
+  content  = "Hello Terraform"
+  filename = "test.txt"
 }
